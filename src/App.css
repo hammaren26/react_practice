@@ -1,0 +1,16 @@
+/* src/styles.css */
+/* @import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css"; */
+
+/* @import "../node_modules/tailwindcss/base.css";
+@import "../node_modules/tailwindcss/components.css";
+@import "../node_modules/tailwindcss/utilities.css"; */
+
+@import url("../node_modules/tailwindcss/base.css");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
