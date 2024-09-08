@@ -1,0 +1,43 @@
+.todo_form {
+   background-color: white;
+   border-radius: 8px;
+   padding: 20px;
+   width: 500px;
+   margin: 0 auto;
+   margin-top: 50px;
+   box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+}
+
+.todo_input {
+   width: 100%;
+   border: none;
+   display: block;
+   color: black;
+   font-size: 16px;
+}
+
+.todo_input:focus {
+   outline: none;
+}
+
+.modern_btn {
+   display: inline-block;
+   border: none;
+   border-radius: 4px;
+   background-color: #f7ca18;
+   padding: 12px 18px;
+   font-size: 18px;
+   color: white;
+   cursor: pointer;
+   transition: color 0.3s;
+}
+
+.todo_form > div {
+   display: flex;
+   width: 100%;
+   gap: 8px;
+}
+
+.modern_btn:hover {
+   color: inherit;
+}

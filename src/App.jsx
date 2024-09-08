@@ -1,14 +1,13 @@
-import Hello from "./components/Hello";
-import Button from "./components/Button";
+import Todo from "./components/Todo/Todo.jsx";
+import Header from "./components/Header/Header";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Hello />
-      <hr />
-
-      <br />
-      <Button name="John">Peter</Button>
+      <Header></Header>
+      <Todo></Todo>
     </div>
   );
 }

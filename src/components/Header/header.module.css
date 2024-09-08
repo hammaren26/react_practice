@@ -1,0 +1,15 @@
+.header {
+   background-color: rgb(241, 233, 198);
+   border-bottom: 1px solid currentColor;
+   margin: 0 0 14px 0;
+   display: flex;
+   font-size: 2em;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 15px;
+   min-height: 50px;
+   font-family: sans-serif;
+   text-transform: uppercase;
+   font-weight: 600;
+   color: rgb(97, 95, 95);
+}

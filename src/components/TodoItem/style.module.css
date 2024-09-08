@@ -1,0 +1,53 @@
+.list_item {
+   list-style-type: square;
+   margin-left: 19px;
+   display: flex;
+   justify-content: space-between;
+   padding: 8px 16px;
+   border: 1px dashed;
+}
+
+.list_item > span:nth-child(1) {
+   font-size: 28px;
+   color: rgb(0, 0, 0);
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.list_remove {
+   font-size: 25px;
+   background-color: gray;
+   border-radius: 100%;
+   display: flex;
+   flex-shrink: 0;
+   align-items: center;
+   justify-content: center;
+   width: 35px;
+   height: 35px;
+   color: rgb(238, 227, 227);
+   line-height: normal;
+   cursor: pointer;
+   padding: 4px;
+}
+
+svg {
+   max-width: 100%;
+   height: auto;
+}
+
+.done_btn {
+   font-size: 28px;
+   color: rgb(0, 0, 0);
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.completed {
+   text-decoration-line: line-through;
+}
+
+@media (any-hover: hover) {
+   .done_btn:hover {
+      color: rgb(255, 38, 0);
+   }
+}
