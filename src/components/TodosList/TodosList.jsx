@@ -6,7 +6,7 @@ export default function TodosList({ todosList, setTodosList }) {
   useLayoutEffect(() => {
     let list = JSON.parse(localStorage.getItem("todo-list"));
 
-    if (list.length > 0) {
+    if (list && list.length > 0) {
       setTodosList(list);
     }
   }, []);
