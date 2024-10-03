@@ -1,13 +1,7 @@
 /* src/styles.css */
-/* @import "tailwindcss/base.css";
-@import "tailwindcss/components.css";
-@import "tailwindcss/utilities.css"; */
-
-/* @import "../node_modules/tailwindcss/base.css";
-@import "../node_modules/tailwindcss/components.css";
-@import "../node_modules/tailwindcss/utilities.css"; */
-
-@import url("../node_modules/tailwindcss/base.css");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 * {
    margin: 0;
@@ -17,8 +11,44 @@
 
 html {
    font-size: 62.5%;
+   --scroll-color: rgb(59 130 246);
 }
 
 body {
    font-size: 2rem;
+}
+
+svg path {
+   transition: all 0.3s;
+}
+
+.App {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   overflow: hidden;
+}
+
+.custom_scroll::-webkit-scrollbar {
+   width: 7px;
+   border-radius: 4px;
+}
+
+.custom_scroll::-webkit-scrollbar-track {
+   background: #c5c5c5;
+   width: 7px;
+   border-radius: 4px;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb {
+   background-color: var(--scroll-color);
+   border-radius: 4px;
+}
+
+/*only for firefox */
+@-moz-document url-prefix() {
+   .custom_scroll {
+      scrollbar-color: var(--scroll-color) #c5c5c5;
+      scrollbar-width: thin;
+   }
 }

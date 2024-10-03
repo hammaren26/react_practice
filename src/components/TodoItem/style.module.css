@@ -7,6 +7,10 @@
    border: 1px dashed;
 }
 
+.item_done {
+   text-decoration-line: line-through;
+}
+
 .list_item > span:nth-child(1) {
    font-size: 28px;
    color: rgb(0, 0, 0);
@@ -44,6 +48,12 @@ svg {
 
 .completed {
    text-decoration-line: line-through;
+}
+
+.done_icon {
+   path {
+      fill: green;
+   }
 }
 
 @media (any-hover: hover) {

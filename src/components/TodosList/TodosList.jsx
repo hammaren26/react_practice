@@ -1,50 +1,37 @@
+import { useLayoutEffect } from "react";
 import TodoItem from "../TodoItem/TodoItem";
 import style from "./style.module.css";
 
 export default function TodosList({ todosList, setTodosList }) {
+  useLayoutEffect(() => {
+    let list = JSON.parse(localStorage.getItem("todo-list"));
+
+    if (list.length > 0) {
+      setTodosList(list);
+    }
+  }, []);
+
   const sortedTodoList = todosList.slice().sort((a, b) => {
-    console.log({
-      a: Number(a.done),
-      b: Number(b.done),
-    });
     return Number(a.done) - Number(b.done);
   });
-
-  function toCamelCase(str) {
-    let arr = str.split(/[-_]/);
-
-    arr.forEach((element, index) => {
-      if (index > 0) {
-        arr[index] = element.charAt(0).toUpperCase() + element.slice(1);
-      }
-    });
-
-    return arr.join("");
-  }
-
-  let str = "the-stealth-warrior";
-  let str2 = "The_Stealth_Warrior";
-  let str3 = "The_Stealth-Warrior";
-
-  console.log(toCamelCase(str));
-  console.log(toCamelCase(str2));
-  console.log(toCamelCase(str3));
 
   return (
     <>
       {todosList.length ? (
-        <ul className={style.list}>
+        <ul
+          className={`${style.todo_list} flex flex-col custom_scroll gap-3 rounded-md p-4 mr-4 ml-4 mt-4 bg-white shadow-lg overflow-y-auto`}
+        >
           {sortedTodoList.map((item, index) => (
             <TodoItem
               data_key={index}
-              key={item.name}
+              key={item.id}
               item={item}
               todosList={todosList}
               setTodosList={setTodosList}
             ></TodoItem>
           ))}
         </ul>
-      ) : undefined}
+      ) : null}
     </>
   );
 }

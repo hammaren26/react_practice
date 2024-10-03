@@ -1,5 +1,6 @@
-ul {
-   display: grid;
-   grid-template-columns: auto;
-   gap: 8px;
+.todo_list {
+   overflow: auto;
+   flex: 1;
+   margin-bottom: 150px;
+   scrollbar-gutter: stable;
 }
